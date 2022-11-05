@@ -36,5 +36,6 @@ navEl.forEach((el) => {
 
     const ulEl = el.querySelectorAll("li");
     console.log("Elements:", ulEl.length);
+    
     console.log("");
 });
