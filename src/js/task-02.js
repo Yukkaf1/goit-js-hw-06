@@ -11,29 +11,25 @@ const ingredients = [
 const navUl = document.querySelector("ul[id=ingredients]");
 console.log(navUl);
 
-const list = [];
+// const list = [];
 
-ingredients.forEach((ingredient) => {
+// ingredients.forEach((ingredient) => {
  
+//   const navEl = document.createElement("li");
+//   navEl.classList.add("item");
+//   navEl.textContent = ingredient;
+//   list.push(navEl)
+//   // console.log(navEl);
+// });
+
+const list = ingredients.map(ingredient => {
   const navEl = document.createElement("li");
   navEl.classList.add("item");
   navEl.textContent = ingredient;
-  list.push(navEl)
-  // console.log(navEl);
+  return navEl
 });
 
 console.log(list);
 
 navUl.append(...list);
-
-// const navEl = document.createElement("li");
-// navEl.classList.add("item");
-// navEl.textContent = ingredients[0];
-// console.log(navEl);
-
-
-
-
-// navUl.appendChild(navEl);
-// console.log(navUl);
 
