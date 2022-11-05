@@ -1,0 +1,48 @@
+/*Логотипы*/
+
+.logo {
+    color: var(--logo-text-color);
+    font-family: Raleway,sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    font-size: 24px;
+    line-height: 1.2;
+
+
+    &--header {
+      display: inline-block;
+      margin-right: 15px;
+      padding-bottom: 16px;
+      padding-top: 16px;
+
+      @include mq(tablet) {
+        padding-bottom: 26px;
+        padding-top: 26px;
+        margin-right: 88px;
+        }
+
+        @include mq(desktop) {
+          padding-bottom: 24px;
+          padding-top: 24px;
+            margin-right: 93px;
+            font-size: 26px;
+    }
+  }
+    &--revers {
+        display: inline-flex;
+        color: var(--primary-white-color);
+        background-color: var(--background-color);
+      
+
+        @include mq(desktop) {
+            font-size: 26px;
+            text-align: start;
+        }
+  }
+} 
+
+
+.logo__text {color: var(--accent-color);
+    
+    &--revers {color: var(--accent-color);}
+}

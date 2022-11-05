@@ -1,0 +1,46 @@
+/*Секция комнада*/
+.team-section {
+    background-color: var(--background-color-secondary);
+  }
+  
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: var(--indent);
+  }
+  
+  .team-list__item {
+    --items: 1;
+
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @include mq(tablet) {
+    --items: 2; 
+    }
+    @include mq(desktop) {
+    --items: 4;
+    }
+  }
+  
+  .team-list__h3-like {
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .team-list__h3-like,
+  .team-list__p-like {
+    text-align: center;
+  }
+  
+  .team.card {
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }

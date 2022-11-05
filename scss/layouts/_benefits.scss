@@ -1,0 +1,68 @@
+/*Секция преимущества*/
+.benefits__section {
+    padding-bottom: none;
+    }
+    
+    .benefits-list {
+      display: block;
+
+      @include mq(tablet) {
+      
+      display: flex;
+      align-content: flex-start;
+    
+      flex-wrap: wrap;
+      gap: var(--indent);
+    }
+  }
+
+    .benefits-item {
+  
+      --items: 1;
+
+      @include mq(mobile-only) {
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+
+      @include mq(tablet) {
+      --items: 2; 
+      }
+      @include mq(desktop) {
+      --items: 4;
+      }
+    }
+    
+    .benefits-list__h3-like {
+      color: var(--primary-text-color);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px;
+    
+      margin-bottom: 10px;
+
+      @include mq(mobile-only) {
+        text-align: center;
+        }
+    }
+    
+    .benefits-list__p-like {
+    color: var(--secondary-text-color);
+    line-height: 1.7;
+    }
+    
+    .benefits-item__meta {
+      display: flex;
+      min-width: 100%;
+      min-height: 120px ;
+      background-color: var(--background-color-secondary);
+      justify-content: center;
+      align-items: center;
+    
+      margin-bottom: 30px;
+    
+      border-radius: 4px;
+    }
+    
+    
