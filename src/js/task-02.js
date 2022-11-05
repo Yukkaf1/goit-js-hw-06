@@ -22,12 +22,16 @@ console.log(navUl);
 //   // console.log(navEl);
 // });
 
-const list = ingredients.map(ingredient => {
+const makeList = ingredients => {
+  return ingredients.map(ingredient => {
   const navEl = document.createElement("li");
   navEl.classList.add("item");
   navEl.textContent = ingredient;
   return navEl
 });
+};
+
+const list = makeList(ingredients);
 
 console.log(list);
 

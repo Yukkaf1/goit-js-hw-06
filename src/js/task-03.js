@@ -16,5 +16,15 @@ const images = [
 
 const galleryEl = document.querySelector("gallery");
 
-elenemts = [];
+const elements = images.map(image => {
+  const imageEl = document.createElement("img");
+  imageEl.src = image.url;
+  imageEl.alt = image.alt;
+  imageEl.width = 320;
+  console.log(imageEl);
+  return imageEl;
+});
 
+galleryEl.append(...elements);
+
+console.log(galleryEl);
