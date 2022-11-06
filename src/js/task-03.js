@@ -14,17 +14,28 @@ const images = [
 ];
 
 
-const galleryEl = document.querySelector("gallery");
+const galleryEl = document.querySelector("ul[class=gallery]");
+// console.log(galleryEl);
+galleryEl.classList.add(".gallery");
 
-const elements = images.map(image => {
+const makeGallery = images => {
+return images.map(image => {
   const imageEl = document.createElement("img");
   imageEl.src = image.url;
   imageEl.alt = image.alt;
   imageEl.width = 320;
-  console.log(imageEl);
+  imageEl.classList.add(".img-gallery");
+
+  // console.log(imageEl);
   return imageEl;
 });
+};
+
+const elements = makeGallery(images);
+
+console.log(elements);
+
 
 galleryEl.append(...elements);
 
-console.log(galleryEl);
+// console.log(galleryEl);
