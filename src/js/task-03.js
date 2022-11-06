@@ -16,26 +16,36 @@ const images = [
 
 const galleryEl = document.querySelector("ul[class=gallery]");
 // console.log(galleryEl);
-galleryEl.classList.add(".gallery");
+galleryEl.classList.add("gallery-task03");
 
-const makeGallery = images => {
-return images.map(image => {
-  const imageEl = document.createElement("img");
-  imageEl.src = image.url;
-  imageEl.alt = image.alt;
-  imageEl.width = 320;
-  imageEl.classList.add(".img-gallery");
+// const makeGallery = images => {
+// return images.map(image => {
+//   const imageLi = document.createElement("li");
+//   const imageEl = document.createElement("img");
+//   imageLi.appendChild(imageEl);
+//   imageEl.src = image.url;
+//   imageEl.alt = image.alt;
+//   imageEl.width = 320;
+//   imageEl.classList.add(".img-gallery");
 
-  // console.log(imageEl);
-  return imageEl;
-});
-};
+//   // console.log(imageEl);
+//   return imageLi;
+// });
+// };
 
-const elements = makeGallery(images);
+// const elements = makeGallery(images);
 
-console.log(elements);
+// // console.log(elements);
 
 
-galleryEl.append(...elements);
+// galleryEl.append(...elements);
 
-// console.log(galleryEl);
+// // console.log(galleryEl);
+
+const imageLi = images
+.map(({url, alt}) => 
+`<li class="image-gallery-task03"><img src="${url}" 
+alt="${alt}" width="320"/></li>`)
+.join("");
+
+galleryEl.insertAdjacentHTML("afterbegin", imageLi)
