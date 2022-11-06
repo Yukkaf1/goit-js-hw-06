@@ -32,8 +32,10 @@
 //     });
 
 
+
+// ==================================
 const value = document.querySelector('#value');
-const Btn = document.querySelector('button');
+const Btn = document.querySelectorAll('button');
 
 const counter = {
     value: 0,
@@ -49,9 +51,10 @@ const counter = {
 
 // console.log(Btn.dataset.action)
 
-Btn.addEventListener("click", () => {
-     (Btn.dataset.action === "decrement")
+Btn.forEach(button => button.addEventListener("click", () => {
+     (button.dataset.action == "decrement")
         ? counter.decrement()
         : counter.increment();
-        },
-value.textContent = counter.value);
+        value.textContent = counter.value
+    },
+));
