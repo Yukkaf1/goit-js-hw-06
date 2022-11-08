@@ -5,7 +5,12 @@ const symbol = Number(imputEl.dataset.length)
 imputEl.addEventListener('blur', countSymbolImput);
 
 function countSymbolImput (event) {
-   (event.currentTarget.value.length === symbol)
-   ? imputEl.classList.add('valid')
-   : imputEl.classList.add('invalid')
-    };
+   if( event.currentTarget.value.length === symbol ) {
+      imputEl.classList.remove('invalid')
+      imputEl.classList.add('valid')
+   }
+   else {
+      imputEl.classList.add('invalid')
+      imputEl.classList.remove('valid')
+   }
+};
